@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+	<item android:drawable="@drawable/right_72" android:duration="100" />
+	<item android:drawable="@drawable/right_74" android:duration="100" />
+	<item android:drawable="@drawable/right_76" android:duration="100" />
+	<item android:drawable="@drawable/right_78" android:duration="100" />
+	<item android:drawable="@drawable/right_80" android:duration="100" />
+	<item android:drawable="@drawable/right_82" android:duration="100" />
+	<item android:drawable="@drawable/right_84" android:duration="100" />
+	<item android:drawable="@drawable/right_86" android:duration="100" />
+	<item android:drawable="@drawable/right_88" android:duration="100" />
+	<item android:drawable="@drawable/right_90" android:duration="100" />
+	<item android:drawable="@drawable/right_92" android:duration="100" />
+	<item android:drawable="@drawable/right_94" android:duration="100" />
+	<item android:drawable="@drawable/right_96" android:duration="100" />
+	<item android:drawable="@drawable/right_98" android:duration="100" />
+	<item android:drawable="@drawable/right_100" android:duration="100" />
+</animation-list>

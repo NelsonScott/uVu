@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false" >
+	<item android:drawable="@drawable/left_36" android:duration="100" />
+	<item android:drawable="@drawable/left_38" android:duration="100" />
+	<item android:drawable="@drawable/left_40" android:duration="100" />
+	<item android:drawable="@drawable/left_42" android:duration="100" />
+	<item android:drawable="@drawable/left_44" android:duration="100" />
+	<item android:drawable="@drawable/left_46" android:duration="100" />
+	<item android:drawable="@drawable/left_48" android:duration="100" />
+	<item android:drawable="@drawable/left_50" android:duration="100" />
+	<item android:drawable="@drawable/left_52" android:duration="100" />
+	<item android:drawable="@drawable/left_54" android:duration="100" />
+	<item android:drawable="@drawable/left_56" android:duration="100" />
+	<item android:drawable="@drawable/left_58" android:duration="100" />
+	<item android:drawable="@drawable/left_60" android:duration="100" />
+	<item android:drawable="@drawable/left_62" android:duration="100" />
+	<item android:drawable="@drawable/left_64" android:duration="100" />
+	<item android:drawable="@drawable/left_66" android:duration="100" />
+	<item android:drawable="@drawable/left_68" android:duration="100" />
+	<item android:drawable="@drawable/left_70" android:duration="100" />
+</animation-list>
