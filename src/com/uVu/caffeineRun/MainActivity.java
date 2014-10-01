@@ -1,13 +1,14 @@
 package com.uVu.caffeineRun;
 
 import java.io.IOException;
-import java.util.Arrays;
 import java.util.LinkedList;
 
-import com.uVu.caffeineRun.R;
-
+import android.app.Activity;
+import android.content.Intent;
+import android.content.res.AssetFileDescriptor;
+import android.content.res.AssetManager;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.graphics.Color;
-import android.graphics.Point;
 import android.graphics.drawable.AnimationDrawable;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -17,14 +18,7 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.app.Activity;
-import android.content.Context;
-import android.content.Intent;
-import android.content.res.AssetFileDescriptor;
-import android.content.res.AssetManager;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.util.Log;
-import android.view.Display;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -32,17 +26,9 @@ import android.view.animation.AccelerateInterpolator;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.animation.Animation.AnimationListener;
-import android.view.animation.TranslateAnimation;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemSelectedListener;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 public class MainActivity extends Activity implements SensorEventListener{
@@ -55,7 +41,6 @@ long startTime, elapsedTime, lastUpdate;
 float moveIncrement, middle, moveRightLimit, moveLeftLimit, 
 difficulty;
 Timer timer;
-Boolean test = true;
 ScoreDB scoreDB;
 LinkedList<Integer> ll = new LinkedList<Integer>();
 
@@ -111,7 +96,6 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
       					pause.setImageResource(R.drawable.play);
       					
       					//stop the background
-      					//added for testing
       					RelativeLayout rl = (RelativeLayout) findViewById(R.id.main);
       					AnimationDrawable frameAnimation = (AnimationDrawable) rl.getBackground();
       					frameAnimation.stop();
@@ -130,7 +114,6 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
       					pause.setImageResource(R.drawable.pause);
       					
       					//start the background
-      					//added for testing
       					RelativeLayout rl = (RelativeLayout) findViewById(R.id.main);
       					AnimationDrawable frameAnimation = (AnimationDrawable) rl.getBackground();
       					frameAnimation.start();
@@ -147,6 +130,7 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
         CursorFactory cf = null;
         scoreDB = new ScoreDB(this, "scoreDB", cf);
         
+        //help screen
         final ImageButton help = (ImageButton)findViewById(R.id.help);
 		help.setOnClickListener(new OnClickListener(){
 			public void onClick(View view){
@@ -203,7 +187,6 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
 				int[]posXY= new int[2];
 				mainChar.getLocationInWindow(posXY);
 				middle = posXY[0];
-				//changed from .005 to .01 for faster start 
 				moveIncrement = (float)(middle*.01); 
 				moveRightLimit = (float) (middle+0.5*middle);
 				moveLeftLimit= (float)(middle-0.5*middle);
@@ -266,9 +249,6 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
 		ImageView mainChar = (ImageView)findViewById(R.id.mainChar);
 		mainChar.getLocationInWindow(posXY);
 		int currentPosition = posXY[0];
-		if (currentPosition > middle){
-			
-		}
 		
 		float delta = (float) (moveIncrement*difficulty*2);
 		if (oriented>=0){
@@ -276,14 +256,13 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
 				oriented = 1;
 			}
 			delta = delta*((float)oriented/10);
-//			Check right boundary
+			//Check right boundary
 			if ((currentPosition+delta)>moveRightLimit){
 				mainChar.setX(moveRightLimit);
 				mainChar.setImageResource(R.drawable.fall_right);
 				gameOver();
 			}
 			else{
-//			Log.d(TAG, "Oriented value: "+oriented+"\nDelta value: "+delta);
 				mainChar.setX(currentPosition+delta);
 				tilt(mainChar, currentPosition+delta);
 			}
@@ -291,14 +270,13 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
 		}
 		else {
 			delta = -delta*((float)oriented/10);
-//			Check left boundary
+			//Check left boundary
 			if ((currentPosition-delta)<moveLeftLimit){
 				mainChar.setX(moveLeftLimit);
 				mainChar.setImageResource(R.drawable.fall_left);
 				gameOver();
 			}
 			else {
-//			Log.d(TAG, "Oriented value: "+oriented+"\nDelta value: "+delta);
 				mainChar.setX(currentPosition-delta);
 				tilt(mainChar, currentPosition-delta);
 			}

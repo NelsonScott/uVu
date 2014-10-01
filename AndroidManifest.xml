@@ -3,6 +3,9 @@
     package="com.uVu.caffeineRun"
     android:versionCode="1"
     android:versionName="1.0" >
+    
+    <uses-permission
+            android:name="android.permission.MODIFY_AUDIO_SETTINGS" />  
 
     <uses-sdk
         android:minSdkVersion="12"
@@ -10,7 +13,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/custom_launcher_trim"
+        android:icon="@drawable/launcher_icon_trim"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity

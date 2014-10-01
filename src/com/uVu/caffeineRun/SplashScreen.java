@@ -15,21 +15,13 @@ import android.widget.ImageView;
 public class SplashScreen extends Activity {
 
 	private static final String TAG = "splashscreen";
-//	Changed from 3000 to 100 for development
-	private static final int SPLASH_TIME_OUT = 100;
+	private static final int SPLASH_TIME_OUT = 3000;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 	    super.onCreate(savedInstanceState);
 	    setContentView(R.layout.splashscreen);
-//	    ImageView iv = (ImageView) findViewById(R.id.splashview);
-//	    Bitmap bMap = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
-//	    int height = bMap.getHeight();
-//	    int width = bMap.getWidth();
-//	    int scale = 5;
-//	    bMap = Bitmap.createScaledBitmap(bMap, width*scale, height*scale, true);
-//	    iv.setImageBitmap(bMap);
 	    
 	    new Handler().postDelayed(new Runnable() {
 

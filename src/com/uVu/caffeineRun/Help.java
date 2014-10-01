@@ -1,12 +1,8 @@
 package com.uVu.caffeineRun;
 
 import com.uVu.caffeineRun.R;
-import com.uVu.caffeineRun.R.layout;
-import com.uVu.caffeineRun.R.menu;
-
 import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;

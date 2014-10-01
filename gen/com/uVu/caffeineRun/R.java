@@ -95,7 +95,7 @@ public final class R {
         public static final int help_screen2=0x7f020044;
         public static final int highscore_screen=0x7f020045;
         public static final int ic_launcher=0x7f020046;
-        public static final int launcher=0x7f020047;
+        public static final int launcher_icon_trim=0x7f020047;
         public static final int left_35=0x7f020048;
         public static final int left_36=0x7f020049;
         public static final int left_37=0x7f02004a;
