@@ -270,7 +270,6 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
 			
 		}
 		
-		//Fix all this up in the morning
 		float delta = (float) (moveIncrement*difficulty*2);
 		if (oriented>=0){
 			if (oriented == 0){
