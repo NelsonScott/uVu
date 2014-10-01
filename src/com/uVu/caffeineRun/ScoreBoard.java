@@ -2,15 +2,10 @@ package com.uVu.caffeineRun;
 
 import java.util.Arrays;
 
-import com.uVu.caffeineRun.R;
-import com.uVu.caffeineRun.R.layout;
-import com.uVu.caffeineRun.R.menu;
-
-import android.os.Bundle;
 import android.app.Activity;
-import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.graphics.Color;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;

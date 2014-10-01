@@ -18,7 +18,6 @@ import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
-import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -66,7 +65,6 @@ LinkedList<Integer> ll = new LinkedList<Integer>();
             mediaPlayer.prepare();
             mediaPlayer.setLooping(true);
         } catch (IOException e) {
-            Log.d(TAG, "could not load music: "+e.getMessage());
             mediaPlayer = null;
         }
         
