@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.uVu.caffeineRun"
-    android:versionCode="1"
-    android:versionName="1.0" >
-    
+    android:versionCode="3"
+    android:versionName="2.5" >
+
     <uses-sdk
         android:minSdkVersion="12"
         android:targetSdkVersion="17" />
@@ -30,14 +30,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ScoreBoard"
+            android:name="com.uVu.caffeineRun.ScoreBoard"
             android:label="@string/title_activity_score_board"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>
         <activity
-            android:name=".Help"
+            android:name="com.uVu.caffeineRun.Help"
             android:label="@string/title_activity_help"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.uVu.caffeineRun.CharSelection"
+            android:label="@string/title_activity_char_selection"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar" >
+        </activity>
+        <activity
+            android:name="com.uVu.caffeineRun.BackgroundSelection"
+            android:label="@string/title_activity_background_selection" 
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar" >
         </activity>

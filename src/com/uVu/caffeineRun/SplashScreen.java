@@ -8,7 +8,7 @@ import android.os.Handler;
 public class SplashScreen extends Activity {
 
 	private static final String TAG = "splashscreen";
-	private static final int SPLASH_TIME_OUT = 3000;
+	private static final int SPLASH_TIME_OUT = 2000;
 
 	/** Called when the activity is first created. */
 	@Override
@@ -20,7 +20,7 @@ public class SplashScreen extends Activity {
 
             @Override
             public void run() {
-                Intent i = new Intent(SplashScreen.this, MainActivity.class);
+                Intent i = new Intent(SplashScreen.this, CharSelection.class);
                 startActivity(i);
  
                 // close this activity

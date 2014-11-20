@@ -18,5 +18,7 @@
 
     <string name="title_activity_score_board">ScoreBoard</string>
     <string name="title_activity_help">Help</string>
+    <string name="title_activity_char_selection">CharSelection</string>
+    <string name="title_activity_background_selection">BackgroundSelection</string>
 
 </resources>
